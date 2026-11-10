@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Registration Form</title>
+</head>
+
+<body>
+
+    <h1>Student Registration Form</h1>
+    <hr>
+
+    <form>
+
+        <h2>Personal Details</h2>
+
+        <label>Full Name:</label><br>
+        <input type="text" name="fullname" placeholder="Enter your name" required>
+        <br><br>
+
+        <label>Email:</label><br>
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br><br>
+
+        <label>Phone Number:</label><br>
+        <input type="tel" name="phone" placeholder="Enter your phone number" required>
+        <br><br>
+
+        <label>Date of Birth:</label><br>
+        <input type="date" name="dob" required>
+        <br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+
+        <label>Address:</label><br>
+        <textarea name="address" rows="4" cols="30" placeholder="Enter your address" required></textarea>
+        <br><br>
+
+        <hr>
+
+        <h2>Academic Details</h2>
+
+        <label>Course:</label><br>
+        <select name="course" required>
+            <option value="">Select your course</option>
+            <option value="B.Tech">B.Tech</option>
+            <option value="BCA">BCA</option>
+            <option value="B.Sc">B.Sc</option>
+            <option value="MCA">MCA</option>
+        </select>
+        <br><br>
+
+        <label>Department:</label><br>
+        <input type="text" name="department" placeholder="Enter your department" required>
+        <br><br>
+
+        <label>Year of Study:</label><br>
+        <select name="year" required>
+            <option value="">Select year</option>
+            <option value="First Year">First Year</option>
+            <option value="Second Year">Second Year</option>
+            <option value="Third Year">Third Year</option>
+            <option value="Fourth Year">Fourth Year</option>
+        </select>
+        <br><br>
+
+        <label>Upload Photo:</label><br>
+        <input type="file" name="photo" accept="image/*" required>
+        <br><br>
+
+        <input type="checkbox" name="agreement" required>
+        I agree to the terms and conditions.
+        <br><br>
+
+        <input type="submit" value="Register">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,95 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fetch JSON Data</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 80%;
+            margin: auto;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        button {
+            padding: 10px;
+            margin: 20px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Student Details</h1>
+
+    <button onclick="fetchData()">Load Data</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>City</th>
+            </tr>
+        </thead>
+
+        <tbody id="userData">
+        </tbody>
+
+    </table>
+
+    <script>
+
+        function fetchData() {
+
+            fetch("https://jsonplaceholder.typicode.com/users")
+
+            .then(response => response.json())
+
+            .then(users => {
+
+                let table = document.getElementById("userData");
+
+                table.innerHTML = "";
+
+                users.forEach(user => {
+
+                    let row = table.insertRow();
+
+                    row.insertCell(0).innerHTML = user.id;
+                    row.insertCell(1).innerHTML = user.name;
+                    row.insertCell(2).innerHTML = user.email;
+                    row.insertCell(3).innerHTML = user.address.city;
+
+                });
+
+            })
+
+            .catch(error => {
+                alert("Error fetching data!");
+                console.log(error);
+            });
+
+        }
+
+    </script>
+
+</body>
+</html>

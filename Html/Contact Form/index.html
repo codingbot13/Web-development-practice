@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Contact Form</title>
+</head>
+<body>
+
+    <h1>Contact Us</h1>
+    <hr>
+
+    <form>
+
+        <label>Full Name:</label>
+        <input type="text" name="fullname" placeholder="Enter your name">
+        <br><br>
+
+        <label>Email:</label>
+        <input type="email" name="email" placeholder="Enter your email">
+        <br><br>
+
+        <label>Phone Number:</label>
+        <input type="tel" name="phone" placeholder="Enter your phone number">
+        <br><br>
+
+        <label>Gender:</label>
+        <input type="radio" name="gender" value="Male"> Male
+        <input type="radio" name="gender" value="Female"> Female
+        <input type="radio" name="gender" value="Other"> Other
+        <br><br>
+
+        <label>Subject:</label>
+        <select name="subject">
+            <option value="">Select a subject</option>
+            <option value="General Enquiry">General Enquiry</option>
+            <option value="Technical Support">Technical Support</option>
+            <option value="Feedback">Feedback</option>
+            <option value="Other">Other</option>
+        </select>
+        <br><br>
+
+        <label>Message:</label>
+        <br>
+        <textarea name="message" rows="5" cols="30" placeholder="Enter your message"></textarea>
+        <br><br>
+
+        <input type="checkbox" name="agreement">
+        I agree to the terms and conditions.
+        <br><br>
+
+        <input type="submit" value="Send Message">
+        <input type="reset" value="Clear">
+
+    </form>
+
+</body>
+</html>

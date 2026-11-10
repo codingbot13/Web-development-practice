@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dynamic Student Table</title>
+
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 60%;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: lightblue;
+        }
+
+        input {
+            padding: 5px;
+        }
+
+        button {
+            padding: 8px;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <h1>Student Details</h1>
+
+    <table id="studentTable">
+
+        <tr>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Course</th>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>Arun</td>
+            <td>B.Tech</td>
+        </tr>
+
+    </table>
+
+    <button onclick="addRow()">Add Row</button>
+
+    <button onclick="removeRow()">Remove Row</button>
+
+
+    <script>
+
+        let count = 1;
+
+        function addRow() {
+
+            let table = document.getElementById("studentTable");
+
+            let row = table.insertRow();
+
+            count++;
+
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+
+            cell1.innerHTML = count;
+
+            cell2.innerHTML = '<input type="text" placeholder="Enter name">';
+
+            cell3.innerHTML = '<input type="text" placeholder="Enter course">';
+
+        }
+
+        function removeRow() {
+
+            let table = document.getElementById("studentTable");
+
+            if (table.rows.length > 1) {
+
+                table.deleteRow(table.rows.length - 1);
+
+                count--;
+
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
